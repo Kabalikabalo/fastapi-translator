@@ -1,0 +1,21 @@
+{
+    "build": {
+      "builder": "Nixpacks",
+      "nixpacks": {
+        "plan": {
+          "phases": {
+            "install": {
+              "cmds": [
+                "pip install -r requirements.txt",
+                "python -m spacy download fr_core_news_md"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deploy": {
+      "startCommand": "bash start.sh"
+    }
+  }
+  
